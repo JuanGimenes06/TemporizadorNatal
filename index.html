@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo para natal</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/022be58334.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="conteiner">
+
+        <div class="animation">
+
+            <div class="treno">
+                <i class="fa-solid fa-sleigh fa-2xl"></i>
+            </div>
+
+        </div>
+
+
+        <h1>Tempo restante para o natal</h1>
+        <h2 id="countdown"></h2>
+    </div>
+
+<script>
+
+    var targetDate = new Date('2023-12-25T00:00:01');
+
+
+    var countdownInterval = setInterval(function() {
+
+    var currentDate = new Date();
+
+
+    var timeDifference = targetDate.getTime() - currentDate.getTime();
+
+
+    var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    
+    document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+
+    
+    if (timeDifference <= 0) {
+        clearInterval(countdownInterval); 
+        document.getElementById('countdown').innerHTML = 'Natal!';
+    }
+}, 1000); 
+
+
+    function animarTreno(){
+        
+    }
+
+</script>
+
+</body>
+</html>

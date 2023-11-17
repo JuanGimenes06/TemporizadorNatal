@@ -136,22 +136,18 @@ h2{
 
 #fundo.now{
     background-image: url(img/fundoNatal.png);
-    transition: background-image ease-in-out 1s;}
-
+    transition: background-image ease-in-out 1s;}   
 #barraProgresso{
     height: 20px;
     background-color: #eee;
     margin: 20px 0;
-    border-radius: 10px;
-}
-
+    border-radius: 10px;}
 #progresso{
     height: 100%;
     width: 0;
     background-color: red;
     border-radius: 10px;
-    transition: 1s linear;
-}
+    transition: 1s linear;}
 
 
 
